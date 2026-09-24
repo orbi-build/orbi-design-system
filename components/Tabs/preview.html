@@ -1,0 +1,19 @@
+<!-- @dsCard group="Navigation" height=150 subtitle="CSS-only radio + label tabs" -->
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>Tabs — preview</title></head>
+<body>
+<div class="orbi-frame">
+  <div class="orbi-tabs">
+    <div class="orbi-tab-strip">
+      <input class="orbi-tab-radio" type="radio" name="dt" id="t-active" checked><label for="t-active">进行中 (2)</label>
+      <input class="orbi-tab-radio" type="radio" name="dt" id="t-review"><label for="t-review">评审中 (1)</label>
+      <input class="orbi-tab-radio" type="radio" name="dt" id="t-done"><label for="t-done">已完成 (14)</label>
+    </div>
+    <div class="orbi-tab-panel" data-tab="active">两个交付正在进行。</div>
+    <div class="orbi-tab-panel" data-tab="review">一个 PR 在评审中。</div>
+    <div class="orbi-tab-panel" data-tab="done">14 个交付已合并或关闭。</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!-- @dsCard group="Status" height=330 subtitle="① 需要你处理 — error and warning items" -->
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>NoticeBar — preview</title></head>
+<body>
+<div class="orbi-frame">
+  <section aria-labelledby="nh">
+    <h2 id="nh" class="orbi-notice-heading">①需要你处理 · 2 条</h2>
+    <div class="orbi-notice orbi-notice-error">
+      <svg class="orbi-notice-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m7 7 6 6m0-6-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <div class="orbi-notice-body">
+        <strong>需要你处理：</strong>
+        <span class="orbi-notice-reason">review round 3: blocked_on_human_decision</span>
+        <div class="orbi-notice-actions"><a class="orbi-btn" href="#">打开 Issue #412</a></div>
+        <span class="orbi-muted" style="font-size:.9rem">查看完整记录和下一步。</span>
+      </div>
+    </div>
+    <div class="orbi-notice orbi-notice-warning">
+      <svg class="orbi-notice-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 2 19 18H1L10 2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M10 7v5m0 3h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <div class="orbi-notice-body">
+        <strong>需要你处理：里程碑 v0.6.43 不存在</strong>
+        这次发版声明按里程碑 v0.6.43 取范围，但仓库里没有这个名字的里程碑，所以发版停在这里。创建它之后 Orbi 会自己继续。
+        <div class="orbi-notice-actions"><button class="orbi-btn" type="button">一键创建里程碑并继续</button><a class="orbi-btn orbi-btn-secondary" href="#">在 GitHub 上查看</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

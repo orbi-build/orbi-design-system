@@ -1,0 +1,92 @@
+/* Orbi — component styles. Hand-written from orbi-cloud src/page.ts + src/pages/status.ts
+   and orbi-website public/styles.css; every value is a token from tokens.json or the
+   source's own literal. Product (light) is the default; [data-theme="dark"] is the brand night. */
+
+body { margin: 0; background: var(--surface-page); color: var(--ink); font-family: var(--font-ui); font-size: 16px; line-height: 1.6; }
+[data-theme="dark"] body { font-family: var(--font-body); }
+.orbi-frame { padding: var(--space-4); }
+.orbi-row { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+
+/* Button — product .cta / submit (page.ts), brand .button (styles.css) */
+.orbi-btn { display: inline-flex; align-items: center; justify-content: center; font: inherit; font-weight: 600; line-height: 1.6;
+  padding: var(--space-2) var(--space-4); border: 1px solid rgba(31, 35, 40, 0.15); border-radius: var(--radius-control);
+  background: var(--accent); color: var(--on-accent); text-decoration: none; cursor: pointer; }
+.orbi-btn:hover { background: var(--accent-hover); }
+.orbi-btn:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.orbi-btn-secondary { background: var(--surface-raised); color: var(--success-strong); border-color: var(--success-strong); }
+.orbi-btn-secondary:hover { background: var(--surface-raised); }
+.orbi-btn-login { background: var(--surface-inverse); color: var(--on-inverse); }
+/* brand surface: square, 48px, 0.92rem */
+[data-theme="dark"] .orbi-btn, .orbi-btn-cta { min-height: var(--size-brand-button); padding: 0 var(--space-brand-button-x); border-radius: var(--radius-none);
+  font-size: 0.92rem; border-color: transparent; }
+[data-theme="dark"] .orbi-btn:focus-visible, .orbi-btn-cta:focus-visible { outline: 3px solid var(--signal); outline-offset: 4px; }
+[data-theme="dark"] .orbi-btn-secondary { background: rgba(255, 255, 255, 0); color: var(--ink); border-color: var(--line-dark); }
+[data-theme="dark"] .orbi-btn-secondary:hover { background: var(--info-soft); }
+.orbi-btn-cta { background: var(--signal); color: var(--night); font-family: var(--font-body); }
+.orbi-btn-cta:hover { background: var(--signal-hover); }
+
+/* StatusChip — .chip (page.ts) + .chip.awaiting-human (status.ts) */
+.orbi-chip { display: inline-block; border: 1px solid var(--border-default); border-radius: var(--radius-pill); padding: 0.05rem 0.6rem;
+  font-size: 0.8rem; line-height: 1.6; white-space: nowrap; color: var(--ink); }
+.orbi-chip-ok, .orbi-chip-merged { border-color: var(--success); color: var(--success); }
+.orbi-chip-blocked { border-color: var(--danger); color: var(--danger); }
+.orbi-chip-waiting { border-color: var(--warning); color: var(--warning); background: var(--warning-soft); font-weight: 600; }
+
+/* Card — .card, .card.primary */
+.orbi-card { background: var(--surface-raised); border: 1px solid var(--border-default); border-radius: var(--radius-card);
+  padding: var(--space-5) var(--space-6); margin-bottom: var(--space-4); }
+.orbi-card-primary { border-top: 2px solid var(--info); box-shadow: var(--shadow-card-primary); }
+.orbi-card h2 { font-size: 1.05rem; margin: 0 0 var(--space-2); }
+.orbi-muted { color: var(--ink-muted); }
+.orbi-section-label { color: var(--ink-muted); font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 var(--space-2); }
+[data-theme="dark"] .orbi-card { border-radius: var(--radius-none); }
+
+/* Tabs — DELIVERY_TABS_CSS: hidden radios + labels, :has() shows the panel */
+.orbi-tab-radio { position: absolute; width: 1px; height: 1px; opacity: 0; margin: 0; }
+.orbi-tab-strip { border-bottom: 1px solid var(--border-default); display: flex; gap: var(--space-1); overflow-x: auto; }
+.orbi-tab-strip label { display: inline-block; flex: 0 0 auto; white-space: nowrap; margin: 0 0 -1px; padding: 0.35rem 0.9rem; font-size: 0.9rem;
+  font-weight: 400; border: 1px solid var(--border-default); border-radius: var(--radius-control) var(--radius-control) 0 0; background: var(--surface-subtle); cursor: pointer; }
+.orbi-tab-radio:focus-visible + label { outline: 2px solid var(--focus-ring); outline-offset: -2px; }
+.orbi-tab-radio:checked + label { background: var(--surface-raised); font-weight: 600; }
+.orbi-tab-panel { display: none; padding-top: var(--space-3); }
+.orbi-tabs:has(#t-active:checked) [data-tab="active"],
+.orbi-tabs:has(#t-review:checked) [data-tab="review"],
+.orbi-tabs:has(#t-done:checked) [data-tab="done"] { display: block; }
+
+/* NoticeBar — ① 需要你处理 (.needs-you-item) */
+.orbi-notice-heading { color: var(--ink-muted); font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 var(--space-2); }
+.orbi-notice { display: flex; gap: var(--space-3); align-items: flex-start; padding: var(--space-4); border-radius: var(--radius-card); margin-bottom: var(--space-2); }
+.orbi-notice-warning { background: var(--warning-soft); border: 1px solid var(--warning-border); border-left: 4px solid var(--warning-strong); }
+.orbi-notice-error { background: var(--danger-soft); border: 1px solid var(--danger); border-left: 4px solid var(--danger-strong); }
+.orbi-notice-icon { flex: 0 0 20px; width: 20px; height: 20px; margin-top: 0.1rem; }
+.orbi-notice-warning .orbi-notice-icon { color: var(--warning); }
+.orbi-notice-error .orbi-notice-icon { color: var(--danger-strong); }
+.orbi-notice-body { flex: 1; min-width: 0; }
+.orbi-notice-body strong { display: block; font-weight: 600; }
+.orbi-notice-reason { display: block; margin: 0.35rem 0 0.1rem; overflow-wrap: anywhere; font-family: var(--font-ui-mono); font-size: 0.85rem; color: var(--ink-code); }
+.orbi-notice-actions { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.55rem; }
+
+/* DataTable — .delivery-table */
+.orbi-table { border-collapse: collapse; width: 100%; table-layout: fixed; }
+.orbi-table th, .orbi-table td { border-bottom: 1px solid var(--border-default); padding: var(--space-2) var(--space-3); text-align: left; font-size: 0.9rem; vertical-align: top; overflow-wrap: anywhere; }
+.orbi-table th { color: var(--ink-muted); font-weight: 600; white-space: nowrap; }
+.orbi-table a { color: var(--info); }
+.orbi-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin: 0 0.45rem 0.12rem 0; background: var(--success-strong); }
+.orbi-dot-blocked { background: var(--danger-strong); }
+.orbi-dot-merged { background: var(--merged); }
+.orbi-cell-note { display: block; margin-top: 0.25rem; font-size: 0.8rem; color: var(--ink-muted); }
+
+/* RepoOverviewRow — .repository-overview-row */
+.orbi-overview-columns, .orbi-overview-row { display: grid; grid-template-columns: minmax(0, 2fr) repeat(3, minmax(3.5rem, 0.65fr)) 1.5rem; align-items: center; gap: var(--space-3); }
+.orbi-overview-columns { color: var(--ink-muted); font-size: 0.8rem; border-bottom: 1px solid var(--border-default); padding: var(--space-2) var(--space-3); }
+.orbi-overview-row { min-height: 4rem; padding: 0.55rem var(--space-3); border-bottom: 1px solid var(--border-default); color: inherit; text-decoration: none; }
+.orbi-overview-row:hover, .orbi-overview-row.selected { background: var(--info-soft); }
+.orbi-overview-name { display: flex; align-items: center; gap: var(--space-2); min-width: 0; }
+.orbi-overview-name-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.orbi-overview-headline { grid-column: 1 / 2; color: var(--ink-muted); font-size: 0.85rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-left: 1.25rem; }
+.orbi-overview-counts { grid-column: 2 / 5; grid-row: 1 / 3; display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; font-family: var(--font-ui-mono); }
+.orbi-overview-arrow { grid-column: 5; grid-row: 1 / 3; font-size: 1.5rem; text-align: right; }
+.orbi-state-dot { width: 0.65rem; height: 0.65rem; border-radius: 50%; flex: 0 0 0.65rem; background: var(--neutral); }
+.orbi-state-dot.needs { background: var(--danger); }
+.orbi-state-dot.working { background: var(--info); }
+.orbi-state-dot.done { background: var(--success); }

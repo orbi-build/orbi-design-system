@@ -1,0 +1,55 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Orbi</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@600;700&family=Instrument+Sans:wght@400&display=swap">
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--surface-page); color:var(--ink); font-family:var(--font-body); overflow:hidden; }
+  .cover { position:relative; width:960px; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .deep { fill:var(--night); }
+  .amber { fill:var(--signal); }
+  .relief { fill:var(--line); }
+  .live { fill:var(--run); }
+  .plus { stroke:var(--run); stroke-width:2; fill:none; }
+  .sq { rx:var(--radius-none); }
+  [data-theme="dark"] .deep { fill:var(--paper); }
+  [data-theme="dark"] .plus { stroke:var(--run-on-light); }
+  [data-theme="dark"] .relief { fill:var(--night-3); }
+  .words { position:absolute; left:var(--space-6); bottom:var(--space-6); max-width:440px; }
+  .name { margin:0; font-family:var(--font-display); font-size:120px; line-height:.9; font-weight:600; letter-spacing:-.055em; color:var(--ink); }
+  .tag { margin:var(--space-2) 0 0 4px; font-size:14px; line-height:20px; color:var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      night slab 396×228 bled off top and right (the brand ground, largest) · signal 72×72 square (space-brand-grid) biting the slab's edge like the mark's notch · run 276×36 band · line 204×36 relief band — 4 colours, ≈45% of the right box
+  arrangement one tall slab with an amber satellite at its corner and a strip of two unequal bands beneath, gutters space-brand-cta-gap (12), bottom inset space-6 (24)
+  pattern     plus grid, from the 72px line grid painted over every .night section (space-brand-grid): 15 run-teal pluses on the slab at a 72 pitch
+  scales      pitch and signal side space-brand-grid (72); band height half of it (36); gutters space-brand-cta-gap (12); inset space-6; corners radius-none (the brand never rounds)
+-->
+<rect class="deep sq" x="96" y="-12" width="396" height="228"/>
+<rect class="amber sq" x="60" y="24" width="72" height="72"/>
+<rect class="relief sq" x="0" y="228" width="204" height="36"/>
+<rect class="live sq" x="216" y="228" width="276" height="36"/>
+<g class="plus">
+<path d="M162 36h12M168 30v12"/><path d="M234 36h12M240 30v12"/><path d="M306 36h12M312 30v12"/><path d="M378 36h12M384 30v12"/><path d="M450 36h12M456 30v12"/>
+<path d="M162 108h12M168 102v12"/><path d="M234 108h12M240 102v12"/><path d="M306 108h12M312 102v12"/><path d="M378 108h12M384 102v12"/><path d="M450 108h12M456 102v12"/>
+<path d="M162 180h12M168 174v12"/><path d="M234 180h12M240 174v12"/><path d="M306 180h12M312 174v12"/><path d="M378 180h12M384 174v12"/><path d="M450 180h12M456 174v12"/>
+</g>
+</svg>
+</div>
+<div class="words">
+<p class="name">Orbi</p>
+<p class="tag">File an Issue. Get a release.</p>
+</div>
+</div>
+</body>
+</html>
