@@ -33,9 +33,9 @@ Orbi turns a labelled GitHub Issue into a reviewed, merged pull request and a ta
 
 ## Type
 
-- Brand: `display` (Familjen Grotesk, 600, tight −0.055em tracking) for headlines and big numbers; `body` (Instrument Sans, 17px/1.6) for copy; `mono` (IBM Plex Mono) for labels, uppercase at 0.7rem with +0.1em tracking. Chinese falls back to Noto Sans SC.
+- Brand: `display` (Familjen Grotesk, 600, tight −0.055em tracking) for headlines and big numbers; `body` (Instrument Sans, 17px/1.6) for copy; `mono` (IBM Plex Mono) for labels, uppercase at 0.7rem with +0.1em tracking. Chinese uses the system CJK stack (PingFang SC, Hiragino Sans GB, Microsoft YaHei, Noto Sans CJK SC); no Chinese web font is loaded.
 - Product: `ui` (system-ui) at 16px/1.6; `ui-title` 1.4rem, `ui-heading` 1.05rem, `ui-section-label` 0.8rem uppercase; `ui-mono` for counts and engine reasons.
-- Familjen Grotesk 400/700 and IBM Plex Mono 400 ship as files (Latin subset, from orbi-cloud's OG-image assets). Instrument Sans, Noto Sans SC and the 500/600 weights come from Google Fonts.
+- Familjen Grotesk 400/700 and IBM Plex Mono 400 ship as files (Latin subset, from orbi-cloud's OG-image assets). Instrument Sans and the 500/600 weights come from Google Fonts.
 
 ## Space, radius, shadow
 
@@ -62,6 +62,6 @@ Orbi turns a labelled GitHub Issue into a reviewed, merged pull request and a ta
 ## Not synced
 
 - Components are hand-written static renditions (plain HTML + `components/bundle.css`), not a built library — the sources render HTML strings in TypeScript, with no component package to build.
-- Instrument Sans and Noto Sans SC have no files in either repo; Familjen Grotesk 500/600 and Plex Mono 500 are not in the repo either.
+- Instrument Sans has no files in either repo; Familjen Grotesk 500/600 and Plex Mono 500 are not in the repo either.
 - Not placed: the marketing `.night` radial and linear background gradients (composite values), `clamp()` sizes (the max is recorded), the proof receipt's torn-edge radial pattern, and `badge.svg` (a third-party shields-style badge, not the brand).
 - The `dark` theme values for `info`, `danger-soft` and `track` are mappings, not source values; `merged` and `scrim` have no brand value and inherit.
