@@ -21,3 +21,4 @@ Repository name, state (needs / working / done / idle), headline sentence, the t
 
 - At ≤480px the header is hidden and each row stacks: name, headline, then counts inline with their labels (· 进行中 2).
 - The dot is decoration (`aria-hidden`); the chip and headline carry the state in words.
+- The 需要你 chip is the row's only mark for a problem; the problem itself (reason and fix) lives in ① NoticeBar and is not repeated in the row or in the repository's ② section.

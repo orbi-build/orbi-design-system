@@ -47,6 +47,7 @@ Orbi turns a labelled GitHub Issue into a reviewed, merged pull request and a ta
 ## Layout
 
 - Dashboard: one column, `size-dashboard` (880px) max, sections in the fixed order ① 需要你处理 → ② 正在发生 → ③ 交付记录. At ≤480px tables become two-line rows and every control reaches `size-tap`.
+- Each thing appears once per page (orbi-cloud #1253, rule 1). A problem the person must fix is drawn in full only in ①; elsewhere it is a chip (需要你) or a one-line state sentence. See NoticeBar.
 - Marketing: `size-site` (1400px) shell, dark hero band over the paper body.
 
 ## States and focus
