@@ -19,6 +19,8 @@ The kind (error or warning), the headline, the reason text, and 1–2 actions th
 ## Rules
 
 - Only things the person must do go here; progress belongs in ② 正在发生.
+- One problem, one place. A problem shown in ① is not drawn again anywhere on the page: the repository row marks it with its 需要你 chip only, and that repository's ② 正在发生 keeps its one-line state sentence without repeating the card, the reason or the action. Primer's banner guideline says the same: "Do not display more than one banner (full-width or otherwise) on a single page at the same time" (https://primer.style/product/components/banner/guidelines/).
+- ① sits above everything because what it holds concerns the whole account. A message that concerns one section only sits next to that section instead, never in both places.
 - The reason is never paraphrased when it comes from the engine — print it raw in mono.
 - The action sits on its own line under the reason; a long engine sentence must never run into a button.
 - `warning-border` on `warning-soft` is 2.08:1 — decorative; the 4px rule carries the signal.
