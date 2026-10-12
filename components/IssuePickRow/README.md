@@ -16,7 +16,7 @@ The Issue's repository, number, title and URL, and whether this row's button is 
 
 ## Rules
 
-- At ≤480px each row stacks: line 1 the title link (wrapping as needed), line 2 the button at full width and at least `size-tap` (44px) tall; 0.25rem between them, 0.6rem above and 0.9rem below so the button sits closer to its own Issue than to the next rule. Same treatment as the suggestion rows on that page, so every action button on a phone reads the same.
+- At ≤480px each row stacks: line 1 the title link (wrapping as needed), line 2 the button at full width and at least `size-tap` (44px) tall; 0.25rem between them, 0.6rem above and 0.9rem below so the button sits closer to its own Issue than to the next rule. This is the README's Layout rule for content-plus-action rows, applied here.
 - Above 480px the row stays on one line: title left, button right.
 - Only the first row's button may be solid, and only when nothing else on the page holds the one solid action (no suggestion block); every other row is `orbi-btn-secondary`.
 - At most 3 rows.
