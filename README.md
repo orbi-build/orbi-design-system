@@ -55,6 +55,7 @@ Orbi turns a labelled GitHub Issue into a reviewed, merged pull request and a ta
 
 - Focus is always visible: 2px `focus-ring` (blue) in product, 3px `signal` offset 4px on the brand surface.
 - Hover: `accent-hover` for primary buttons, `info-soft` for rows; brand buttons lift 2px.
+- Issue titles in a list (IssuePickRow, the 「试试 →」 rows, the delivery record, an existing-Issue suggestion) are `ink`, weight 600, no underline; the underline appears on hover. The row structure already says it is clickable, as on GitHub's own Issue list. Blue underlined `info` links are for links inside a sentence (「交付规则 ›」, 「看这一步怎么做」) (NN/g, Guidelines for Visualizing Links; orbi-cloud Discussion on Issue-list link style).
 
 ## Iconography
 
