@@ -7,7 +7,7 @@ Hand-written from orbi-cloud `src/pages/status.ts` (`startPickRow()`, `.start-pi
 ## Anatomy
 
 - Row: flex, title and button on one line, `space-3` gap, 0.35rem vertical padding, a 1px `border-default` top rule.
-- Title: one link, `owner/name#number title`, `info` and underlined; it wraps (`overflow-wrap: anywhere`), never ellipsised — on a phone a cut title (`acme/shop#12 Fix t…`) hides which Issue the button starts (orbi-cloud #1823).
+- Title: one link, `owner/name#number title`, `ink`, weight 600, underlined only on hover (README, States and focus: Issue titles in a list); it wraps (`overflow-wrap: anywhere`), never ellipsised — on a phone a cut title (`acme/shop#12 Fix t…`) hides which Issue the button starts (orbi-cloud #1823).
 - Button: Button, 「让 Orbi 做这个」, does not shrink.
 
 ## What the consumer provides
