@@ -19,3 +19,27 @@ The rows, already ordered; the relative time strings; usage figures if any.
 
 - No row may vanish: a delivery with an unknown label still renders with the raw label as its chip.
 - At ≤480px each row becomes a two-line grid (work on top; status · PR · time below) and the header is visually hidden but stays in the accessibility tree.
+
+## Article comparison matrices
+
+An article comparison matrix has options in columns and attributes or actions
+in rows. Readers compare values across a row. The delivery table's two-line
+mobile grid rule applies to delivery records; use the following rules for
+article comparison matrices.
+
+At narrow widths, retain the native table and its visible column headers.
+Reuse the marketing site's table scroll container and pinned first column
+pattern. Allow horizontal scrolling within the article's content width, and
+keep row labels pinned on an opaque paper background while other columns
+scroll. Let row labels wrap naturally. Keep the existing type size and enough
+column width to read complete words and results. Preserve values, order,
+emphasis and footnotes.
+
+Use column and row headers (`th scope="col"` and `th scope="row"`). Make the
+scroll region keyboard-focusable with a visible focus indicator and a short,
+localized horizontal-scroll hint. Arrow keys must scroll it, and Tab must let
+focus leave. Short matrices use the page's natural vertical scrolling.
+
+The article author explicitly selects comparison layout. Other article tables
+keep their existing responsive behavior. Use the existing brand type, spacing,
+border and paper tokens. The delivery table's styling stays unchanged.
