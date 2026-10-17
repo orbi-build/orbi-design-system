@@ -101,7 +101,8 @@ body { margin: 0; background: var(--surface-page); color: var(--ink); font-famil
   .orbi-pick-row .orbi-btn { width: 100%; min-height: var(--size-tap); }
 }
 
-/* Disclosure: the triangle follows the text, ▾ closed / ▴ open (README, States and focus). */
+/* Dashboard disclosure: the triangle follows the text, ▾ closed / ▴ open (README, States and focus).
+   The marketing site's FAQ keeps its own disclosure style. */
 summary { list-style: none; cursor: pointer; }
 summary::-webkit-details-marker { display: none; }
 summary::after { content: "\00a0▾"; }
