@@ -40,6 +40,10 @@ scroll region keyboard-focusable with a visible focus indicator and a short,
 localized horizontal-scroll hint. Arrow keys must scroll it, and Tab must let
 focus leave. Short matrices use the page's natural vertical scrolling.
 
-The article author explicitly selects comparison layout. Other article tables
-keep their existing responsive behavior. Use the existing brand type, spacing,
+Every table in an article body uses this layout by default; the author
+declares nothing. Article tables never use the delivery table's mobile grid or
+any row-by-row stacking, which would draw a bordered box per cell inside the
+article on phones. A column sizes to its content on one line up to a cap
+(12.5rem on the marketing site), past which its text wraps; show the scroll
+hint only while the table actually overflows its region. Use the existing brand type, spacing,
 border and paper tokens. The delivery table's styling stays unchanged.
