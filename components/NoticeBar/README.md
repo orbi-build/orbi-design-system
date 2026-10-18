@@ -28,4 +28,5 @@ Every icon that sits next to a headline uses this component's icons and this one
 - ① sits above everything because what it holds concerns the whole account. A message that concerns one section only sits next to that section instead, never in both places.
 - The reason is never paraphrased when it comes from the engine — print it raw in mono.
 - The action sits on its own line under the reason; a long engine sentence must never run into a button.
+- A notice that pairs a short headline with one action (打开草稿, 查看结果) may put that action at its right, following README Layout. The button never shrinks (`flex: 0 0 auto`, like `orbi-pick-row`): its label stays on one line and a long headline wraps on the text side instead. Without this a two-line headline squeezed 「打开草稿」 into two lines (2026-10-18).
 - `warning-border` on `warning-soft` is 2.08:1 — decorative; the 4px rule carries the signal.
