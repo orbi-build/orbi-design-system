@@ -68,6 +68,7 @@ body { margin: 0; background: var(--surface-page); color: var(--ink); font-famil
 .orbi-notice-body strong { display: block; font-weight: 600; }
 .orbi-notice-reason { display: block; margin: 0.35rem 0 0.1rem; overflow-wrap: anywhere; font-family: var(--font-ui-mono); font-size: 0.85rem; color: var(--ink-code); }
 .orbi-notice-actions { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.55rem; }
+.orbi-notice > .orbi-btn { flex: 0 0 auto; } /* one action at the notice's right keeps its own width; the text side wraps (orbi-cloud #2597) */
 
 /* DataTable — .delivery-table */
 .orbi-table { border-collapse: collapse; width: 100%; table-layout: fixed; }
