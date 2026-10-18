@@ -58,7 +58,10 @@ body { margin: 0; background: var(--surface-page); color: var(--ink); font-famil
 .orbi-notice { display: flex; gap: var(--space-3); align-items: flex-start; padding: var(--space-4); border-radius: var(--radius-card); margin-bottom: var(--space-2); }
 .orbi-notice-warning { background: var(--warning-soft); border: 1px solid var(--warning-border); border-left: 4px solid var(--warning-strong); }
 .orbi-notice-error { background: var(--danger-soft); border: 1px solid var(--danger); border-left: 4px solid var(--danger-strong); }
-.orbi-notice-icon { flex: 0 0 20px; width: 20px; height: 20px; margin-top: 0.1rem; }
+.orbi-notice-info { background: var(--info-soft); border: 1px solid var(--info); border-left: 4px solid var(--info); }
+.orbi-notice-icon { flex: 0 0 20px; width: 20px; height: 1lh; display: flex; align-items: center; } /* one headline line tall: the icon centres on the first line */
+.orbi-notice-icon svg { display: block; width: 20px; height: 20px; }
+.orbi-notice-info .orbi-notice-icon { color: var(--info); }
 .orbi-notice-warning .orbi-notice-icon { color: var(--warning); }
 .orbi-notice-error .orbi-notice-icon { color: var(--danger-strong); }
 .orbi-notice-body { flex: 1; min-width: 0; }
