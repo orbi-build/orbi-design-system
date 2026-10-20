@@ -54,8 +54,13 @@ Orbi turns a labelled GitHub Issue into a reviewed, merged pull request and a ta
 
 ## States and focus
 
-- Focus is always visible: 2px `focus-ring` (blue) in product, 3px `signal` offset 4px on the brand surface.
-- Hover: `accent-hover` for primary buttons, `info-soft` for rows; brand buttons lift 2px.
+Every clickable thing in the product is one of four kinds, and each kind has exactly one look for hover, press and keyboard focus. A control that fits none of them is added here first, not styled on the page.
+
+- Primary button (`orbi-btn`): hover and press turn the fill `accent-hover`; keyboard focus adds a 2px `focus-ring` outline, offset 2px. The label and border do not change.
+- Secondary button (`orbi-btn orbi-btn-secondary`): hover and press keep the `surface-raised` ground, the `success-strong` label and border — it never turns into a green fill; keyboard focus adds the same 2px `focus-ring` outline, offset 2px.
+- Text-style button (`orbi-btn-text`): `info` text with no ground and no border at rest; hover and press only add an underline, never a ground; keyboard focus adds the 2px `focus-ring` outline, offset 2px. See Button for where it is used.
+- Whole clickable row (RepoOverviewRow, an account-menu entry): hover and press lay `info-soft` across the full width of the row, text colours unchanged; keyboard focus draws the 2px `focus-ring` outline inside the row (offset -2px) so a card edge never clips it.
+- Brand surface (night and paper): buttons lift 2px on hover — the CTA fill turns `signal-hover`, the ghost button `info-soft` — and keyboard focus is 3px `signal`, offset 4px.
 - Dashboard disclosures (anything that opens and closes in place: a `<details>`, 「看其他 N 个」, 「展开全部」, 「为什么建议这件」): the triangle follows the text, `▾` while closed and `▴` while open. On a full-width card row (「用量与设置」) it sits at the row's right end. No triangle before the text and no browser-native marker. Other glyphs keep one meaning each: `›` only for a link that goes somewhere (「交付规则 ›」), `▶` only for play (「看这一步怎么做 ▶」), `…` for a control that opens a confirmation (「断开…」). The one `summary` rule in `components/bundle.css` draws the triangle for every `<summary>`, so templates never type it; a script-driven toggle (a button, not a `<details>`) writes the same `▾` / `▴` after its label (maintainer 2026-10-17:「文字后面还是前面显示三角，这个我们统一了吗？」).
 - Issue titles in a list (IssuePickRow, the 「试试 →」 rows, the delivery record, an existing-Issue suggestion) are `ink`, weight 600, no underline; the underline appears on hover. The row structure already says it is clickable, as on GitHub's own Issue list. Blue underlined `info` links are for links inside a sentence (「交付规则 ›」, 「看这一步怎么做」) (NN/g, Guidelines for Visualizing Links; orbi-cloud Discussion #2311).
 

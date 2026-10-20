@@ -24,6 +24,13 @@ body { margin: 0; background: var(--surface-page); color: var(--ink); font-famil
 [data-theme="dark"] .orbi-btn-secondary:hover { background: var(--info-soft); }
 .orbi-btn-cta { background: var(--signal); color: var(--night); font-family: var(--font-body); }
 .orbi-btn-cta:hover { background: var(--signal-hover); }
+/* Text-style button: looks like text, stands on its own (README, States and focus; Button README).
+   Used alone, never with .orbi-btn. Hover and press only underline; background: none on every
+   state so an element-wide button:hover fill cannot reach it. */
+.orbi-btn-text { display: inline; padding: 0; border: 0; border-radius: 0; background: none; color: var(--info);
+  font: inherit; text-decoration: none; cursor: pointer; }
+.orbi-btn-text:hover, .orbi-btn-text:active { background: none; color: var(--info); text-decoration: underline; }
+.orbi-btn-text:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; border-radius: 2px; }
 
 /* StatusChip — .chip (page.ts) + .chip.awaiting-human (status.ts) */
 .orbi-chip { display: inline-block; border: 1px solid var(--border-default); border-radius: var(--radius-pill); padding: 0.05rem 0.6rem;
@@ -85,6 +92,7 @@ body { margin: 0; background: var(--surface-page); color: var(--ink); font-famil
 .orbi-overview-columns { color: var(--ink-muted); font-size: 0.8rem; border-bottom: 1px solid var(--border-default); padding: var(--space-2) var(--space-3); }
 .orbi-overview-row { min-height: 4rem; padding: 0.55rem var(--space-3); border-bottom: 1px solid var(--border-default); color: inherit; text-decoration: none; }
 .orbi-overview-row:hover, .orbi-overview-row.selected { background: var(--info-soft); }
+.orbi-overview-row:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: -2px; }
 .orbi-overview-name { display: flex; align-items: center; gap: var(--space-2); min-width: 0; }
 .orbi-overview-name-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .orbi-overview-headline { grid-column: 1 / 2; color: var(--ink-muted); font-size: 0.85rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-left: 1.25rem; }
