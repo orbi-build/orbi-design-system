@@ -5,10 +5,10 @@ The shared tokens, type, components and brand rules for every Orbi surface: the 
 **How to use it (people and agents):**
 
 - Read this README first, then the component you are about to touch: `components/<Name>/README.md` (rules) and `components/<Name>/preview.html` (reference markup; styles in `components/bundle.css`).
-- Take colors, spacing, radii and type from `tokens.json`. The `light` theme is the product dashboard; the `dark` theme is the brand night surface. Do not invent new colors, radii or component styles; if a page needs something the system lacks, add it here first.
+- Take colors, spacing, radii and type from `tokens.json`. The `light` theme is the product dashboard; the `dark` theme is the brand night surface. Do not invent new colors, radii or component styles; if a page needs something the system lacks, add it to the system first (see Source of truth).
 - Raw files are public: `https://raw.githubusercontent.com/orbi-build/orbi-design-system/main/<path>`, or `gh repo clone orbi-build/orbi-design-system`.
 
-**Source of truth:** this repository is the only source. Change the system by opening a PR here; there is no other copy to keep in sync. Values were first extracted on 2026-09-24 from `orbi-website@4f1afd6` (`public/styles.css`, logos) and `orbi-cloud@c54feae` (`src/page.ts`, `src/pages/status.ts`, fonts).
+**Source of truth:** the editable system lives in Claude (the Orbi Design System artifact, https://claude.ai/artifact/FyGc28kcprZW3HMDPb3Cyu). This repository is its exported copy. To change the system, edit the artifact first, export its files here unchanged, and open a PR whose description names the artifact version it was exported from (`Canvas version: N`); a check fails any PR without that line. Never edit this repository on its own. Values were first extracted on 2026-09-24 from `orbi-website@4f1afd6` (`public/styles.css`, logos) and `orbi-cloud@c54feae` (`src/page.ts`, `src/pages/status.ts`, fonts).
 
 ---
 
